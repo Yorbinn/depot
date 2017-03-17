@@ -37,6 +37,11 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'capistrano-rails', group: :development
+gem 'capistrano-rvm', group: :development
+gem 'capistrano-bundler', group: :development
+gem 'capistrano-passenger', group: :development
+
 gem 'activemodel-serializers-xml'
 
 group :development, :test do
@@ -47,6 +52,10 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
+end
+
+group :production do
+  gem 'mysql2', '~> 0.4.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
