@@ -2,7 +2,7 @@ require 'test_helper'
 
 class OrderMailerTest < ActionMailer::TestCase
   test "received" do
-   mail = OrderMailer.received(orders(:one))
+    mail = OrderMailer.received(orders(:one))
     assert_equal "Pragmatic Store Order Confirmation", mail.subject
     assert_equal ["dave@example.org"], mail.to
     assert_equal ["depot@example.com"], mail.from
@@ -15,7 +15,6 @@ class OrderMailerTest < ActionMailer::TestCase
     assert_equal ["dave@example.org"], mail.to
     assert_equal ["depot@example.com"], mail.from
     assert_match /<td>1&times;<\/td>\s*<td>Programming Ruby 1.9<\/td>/,
-      mail.body.encoded
+    mail.body.encoded
   end
-
 end

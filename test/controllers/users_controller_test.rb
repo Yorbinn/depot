@@ -38,7 +38,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     patch user_url(@user), params: { user: { name: @user.name, password: 'secret', password_confirmation: 'secret' } }
     assert_redirected_to user_url(@user)
   end
-
+  
   test "should destroy user" do
     assert_difference('User.count', -1) do
       delete user_url(@user)
