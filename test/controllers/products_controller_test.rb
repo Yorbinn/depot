@@ -25,7 +25,6 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_difference('Product.count') do
       post products_url, params: { product: @update }
     end
-
     assert_redirected_to product_url(Product.last)
   end
 
